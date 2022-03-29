@@ -18,6 +18,14 @@ build:
         manual:
           - dest: .
             src: 'src/**/*.ts'
+    - image: mironl/ticketing
+      context: ticketing
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - dest: .
+            src: 'src/**/*.ts'
     - image: mironl/client
       context: client
       docker:
@@ -25,4 +33,4 @@ build:
       sync:
         manual:
           - dest: .
-            src: '**/*.js'
+            src: '**/*.js'    
